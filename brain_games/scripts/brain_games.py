@@ -1,4 +1,8 @@
-import brain_games.scripts.cli as cli
+import sys
+
+sys.path.append("/home/nikon/test/edu/projects/python-project-49/brain_games/scripts/")
+
+import brain_games.cli as cli
 
 
 def main():

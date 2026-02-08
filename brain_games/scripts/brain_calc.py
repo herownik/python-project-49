@@ -2,17 +2,20 @@ import random
 
 import prompt
 
-import brain_games.scripts.brain_games as brain_games
+import sys
+
+sys.path.append("/home/nikon/test/edu/projects/python-project-49/brain_games/scripts/")
+import brain_games.cli as cli
 
 
 def main():
-    name = brain_games.main()
+    name = cli.welcome_user()
     wins = 0
     print('What is the result of the expression?')
 
     while wins < 3:
         opers = ['-', '+', '*']
-        
+
         oper = random.randint(0, 2)
         first = random.randint(0, 20)
         second = random.randint(0, 20)
