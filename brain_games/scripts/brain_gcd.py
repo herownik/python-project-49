@@ -1,7 +1,9 @@
-import brain_games.scripts.brain_games as brain_games
-import random
-import prompt
 import math
+import random
+
+import prompt
+
+import brain_games.scripts.brain_games as brain_games
 
 
 def main():
@@ -26,6 +28,7 @@ def main():
     
     if wins == 3:
         print(f'Congratulations, {name}!')
+
 
 if __name__ == '__main__':
     main()

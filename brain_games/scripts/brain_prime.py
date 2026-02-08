@@ -8,20 +8,15 @@ import brain_games.scripts.brain_games as brain_games
 def main():
     name = brain_games.main()
     wins = 0
-    print('What is the result of the expression?')
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
     while wins < 3:
-        opers = ['-', '+', '*']
-        
-        oper = random.randint(0, 2)
-        first = random.randint(0, 20)
-        second = random.randint(0, 20)
-        quest = f'{first} {opers[oper]} {second}'
-        print(f'Question: {quest}')
+        rand = random.randint(0, 99)
+        print(f'Question: {rand}')
         ans = prompt.string('Your answer: ')
-        result = eval(quest)
+        result = is_prime(rand) and 'yes' or 'no'
 
-        if str(result) == str(ans):
+        if result == ans:
             print('Correct!')
             wins += 1
         else:
@@ -31,6 +26,14 @@ def main():
     
     if wins == 3:
         print(f'Congratulations, {name}!')
+
+
+def is_prime(count):
+    prime = [1, 2, 3, 5, 7]
+    for i in prime:
+        if count % i == 0 and count != i:
+            return False
+    return True
 
 
 if __name__ == '__main__':

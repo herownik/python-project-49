@@ -1,6 +1,8 @@
-import brain_games.scripts.brain_games as brain_games
 import random
+
 import prompt
+
+import brain_games.scripts.brain_games as brain_games
 
 
 def main():
