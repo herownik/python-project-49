@@ -19,7 +19,7 @@ def main():
         start = random.randint(0, 20)
         step = random.randint(0, 20)
         length = 10
-        arr = [start + step * i for i in range(length)]
+        arr = [str(start + step * i) for i in range(length)]
         result = arr[elem]
         arr[elem] = '..'
         prog = ' '.join(arr)
