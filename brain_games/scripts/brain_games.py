@@ -6,8 +6,7 @@ import brain_games.cli as cli
 
 
 def main():
-    name = cli.welcome_user()
-    return name
+    cli.welcome_user()
 
 
 if __name__ == '__main__':
