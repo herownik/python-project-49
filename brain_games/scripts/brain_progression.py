@@ -22,7 +22,8 @@ def main():
         arr = [start + step * i for i in range(length)]
         result = arr[elem]
         arr[elem] = '..'
-        print(f'Question: {arr}')
+        prog = ' '.join(arr)
+        print(f'Question: {prog}')
         ans = prompt.string('Your answer: ')
 
         if str(result) == str(ans):
