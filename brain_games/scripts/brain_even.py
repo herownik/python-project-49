@@ -1,8 +1,7 @@
 import random
+import sys
 
 import prompt
-
-import sys
 
 sys.path.append("/home/nikon/test/edu/projects/python-project-49/brain_games/scripts/")
 import brain_games.cli as cli
