@@ -6,15 +6,19 @@ import prompt
 def main():
     name = brain_games.main()
     wins = 0
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print('What is the result of the expression?')
 
     while wins < 3:
-        rand = random.randint(0, 99)
-        print(f'Question: {rand}')
+        opers = ['-', '+', '*']
+        oper = random.randint(0,2)
+        first = random.randint(0, 20)
+        second = random.randint(0, 20)
+        quest = f'{first} {opers[oper]} {second}'
+        print(f'Question: {quest}')
         ans = prompt.string('Your answer: ')
-        result = rand % 2 == 0 and 'yes' or 'no'
+        result = eval(quest)
 
-        if result == ans:
+        if str(result) == str(ans):
             print('Correct!')
             wins += 1
         else:
@@ -24,7 +28,6 @@ def main():
     
     if wins == 3:
         print(f'Congratulations, {name}!')
-
 
 if __name__ == '__main__':
     main()
