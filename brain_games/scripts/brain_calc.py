@@ -14,12 +14,10 @@ def main():
     print('What is the result of the expression?')
 
     while wins < 3:
-        opers = ['-', '+', '*']
-
-        oper = random.randint(0, 2)
+        oper = random.choice(['-', '+', '*'])
         first = random.randint(0, 20)
         second = random.randint(0, 20)
-        quest = f'{first} {opers[oper]} {second}'
+        quest = f'{first} {oper} {second}'
         print(f'Question: {quest}')
         ans = prompt.string('Your answer: ')
         result = eval(quest)
