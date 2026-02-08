@@ -32,7 +32,7 @@ def main():
 
 
 def is_prime(count):
-    prime = [1, 2, 3, 5, 7]
+    prime = [2, 3, 5, 7]
     for i in prime:
         if count % i == 0 and count != i:
             return False
