@@ -14,7 +14,6 @@ def main():
     print('What number is missing in the progression?')
 
     while wins < 3:
-        opers = ['-', '+', '*']
         elem = random.randint(0, 9)
         start = random.randint(0, 20)
         step = random.randint(0, 20)
